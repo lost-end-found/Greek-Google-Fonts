@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Alegreya);
 @import url(http://fonts.googleapis.com/css?family=Caudex:400,700,400italic,700italic|GFS+Neohellenic:400,700,400italic,700italic|Ubuntu+Mono:400,700,400italic,700italic|Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic|Noto+Sans:400,700,400italic,700italic|Fira+Mono:400,700|Tinos:400,700,400italic,700italic|Arimo:400,700,400italic,700italic|Noto+Serif:400,700,400italic,700italic|Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic|Nova+Mono|Cousine:400,700,400italic,700italic|Ubuntu+Condensed|Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Roboto+Condensed:300italic,400italic,700italic,400,300,700|Open+Sans+Condensed:300,300italic,700|Roboto+Slab:400,100,300,700|Play:400,700|Comfortaa:400,300,700|Didact+Gothic|Cardo:400,700,400italic|Jura:400,300,500,600|Advent+Pro:400,100,200,300,500,600,700|Anonymous+Pro:400,400italic,700,700italic|Press+Start+2P|GFS+Didot&subset=latin,greek);
 body {
 	margin: 0;
@@ -7,38 +8,42 @@ section {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-}
-p {
-	margin: 0;
-	padding: 0;
+	position: relative;
 }
 h1 {
-	font-size: 3em;
-	margin: 0;
-	padding: 0;
 	font-weight: 800;
+	margin: 0;
 }
-div {
-	max-width: 800px;
-	margin: 0 auto;
-	padding: 100px;
 
-}
 /* backgrounds */
 .likavitos {
 	background: url('img/likavitos.jpg');
 	background-position: center;
 	background-size: cover;
 }
-.grass {
-	background: url('img/grass.jpg');
-	background-position: center;
+.new-york {
+	background: url('http://nyc.wpengine.netdna-cdn.com/wp-content/uploads/2013/02/DSC_0630.jpg');
+	background-position: right;
 	background-size: cover;
 }
 .olympos {
 	background: url('img/olympos.jpg');
 	background-position: center;
 	background-size: cover;
+}
+.moonlight {
+	background-image: url("http://38.media.tumblr.com/tumblr_m3d3khUsv61qidet8o1_1280.jpg");
+	background-size: cover;
+}
+.old-london {
+	background-image: url("http://www.bugbog.com/images/galleries/london-pictures/Museum-of-London/old-london-picture.jpg");
+	background-size: cover;
+	background-position: center;
+}
+p.columns-text {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
 }
 /* font colors */
 
@@ -59,7 +64,7 @@ div {
 .comfortaa {
 	font-family: 'Comfortaa', cursive;
 }
-.play {
+.play /* δεν δείχνει το τελικό σίγμα */ {
 	font-family: 'Play', sans-serif;
 }
 .advent-pro {
@@ -68,9 +73,8 @@ div {
 .fira-sans {
 	font-family: 'Fira Sans', sans-serif;
 }
-.neohellenic {
+.neohellenic /* δεν δείχνει σωστά τα νούμερα */ {
 	font-family: 'GFS Neohellenic', sans-serif;
-
 }
 .fira-mono {
 	font-family: 'Fira Mono' ;
@@ -83,4 +87,25 @@ div {
 }
 .ubuntu-condensed {
 font-family: 'Ubuntu Condensed', sans-serif;
+}
+.didot {
+	font-family: 'GFS Didot', serif;
+}
+.didact {
+	font-family: 'Didact Gothic', sans-serif;
+}
+.jura {
+	font-family: 'Jura', sans-serif;
+}
+.anonymous {
+	font-family: 'Anonymous Pro' ;
+}
+.open-sans-condensed {
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+/* english fonts */
+.fonts-names {
+	padding: 10px;
+	font-family: 'Alegreya', serif;
+	font-size: 15px;
 }
