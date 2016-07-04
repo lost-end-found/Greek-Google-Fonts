@@ -3,98 +3,106 @@ body {
 	margin: 0;
 }
 section {
+/*	background: black; */
 	min-height: 100vh;
 	width: 100%;
 	margin: 0;
 	padding: 100px 0;
 }
-p {
-
+h1 {
+/*	color: white; */
 	max-width: 800px;
 	margin: 0 auto;
-/*	font-weight: bold;
-		font-size: 2em; */
+	font-weight: bold;
+		font-size: 3em; 
+}
+p {
+/*	color: white; */
+	max-width: 800px;
+	margin: 0 auto;
+	font-weight: 100;
+
 
 }
 /* fonts */
-p.ena {
+.ena {
 	font-family: 'Caudex', serif;
 }
-p.duo {
+.duo {
 	font-family: 'GFS Neohellenic', sans-serif;
 }
-p.tria {
+.tria {
 	font-family: 'Ubuntu Mono' ;
 }
-p.tessera {
+.tessera {
 	font-family: 'Fira Sans', sans-serif;
 }
-p.pente {
+.pente {
 	font-family: 'Noto Sans', sans-serif;
 }
-p.exi {
+.exi {
 	font-family: 'Fira Mono' ;
 }
-p.efta {
+.efta {
 	font-family: 'Tinos', serif;
 }
-p.oxto {
+.oxto {
 	font-family: 'Arimo', sans-serif;
 }
-p.ennia {
+.ennia {
 	font-family: 'Noto Serif', serif;
 }
-p.deka {
+.deka {
 	font-family: 'Ubuntu', sans-serif;
 }
-p.enteka {
+.enteka {
 	font-family: 'Nova Mono' ;
 }
- p.dwdeka {
+ .dwdeka {
 	font-family: 'Cousine';
 }
-p.dekatria {
+.dekatria {
 	font-family: 'Ubuntu Condensed', sans-serif;
 }
-p.dekatessera {
+.dekatessera {
 	font-family: 'Open Sans', sans-serif;
 }
-p.dekapente {
+.dekapente {
 	font-family: 'Roboto', sans-serif;
 }
-p.dekaexi {
+.dekaexi {
 	font-family: 'Roboto Condensed', sans-serif;
 }
-p.dekaefta {
+.dekaefta {
 	font-family: 'Open Sans Condensed', sans-serif;
 }
-p.dekaoxto {
+.dekaoxto {
 	font-family: 'Roboto Slab', serif;
 }
-p.dekaennia { /* δεν έχει τελικό σίγμα */
+.dekaennia { /* δεν έχει τελικό σίγμα */
 	font-family: 'Play', sans-serif;
 }
-p.eikosi {
+.eikosi {
 	font-family: 'Comfortaa', cursive;
 }
-p.eikosi-ena {
+.eikosi-ena {
 	font-family: 'Didact Gothic', sans-serif;
 }
-p.eikosi-duo {
+.eikosi-duo {
 	font-family: 'Cardo', serif;
 }
-p.eikosi-tria {
+.eikosi-tria {
 	font-family: 'Jura', sans-serif;
 }
-p.eikosi-tessera {
+.eikosi-tessera {
 	font-family: 'Advent Pro', sans-serif;
 }
-	p.eikosi-pente {
+	.eikosi-pente {
 	font-family: 'Anonymous Pro' ;
 }
-p.eikosi-exi {
+.eikosi-exi {
 	font-family: 'Press Start 2P', cursive;
 }
-p.eikosi-efta {
+.eikosi-efta {
 	font-family: 'GFS Didot', serif;
 }

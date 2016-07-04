@@ -14,7 +14,42 @@ h1 {
 	font-weight: 800;
 	margin: 0;
 }
-
+a.white {
+	color: white;
+	text-decoration: underline;
+}
+nav {
+	position: fixed;
+	z-index: 999;
+}
+img.arrow {
+	left: 48%;
+	bottom: 10px;
+	position: absolute;
+	-webkit-transition: all 0.1s  ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+img.arrow:hover {
+	bottom: 5px;
+	-webkit-transition: all 0.1s  ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+img.arrow-top {
+	left: 48%;
+	bottom: 5px;
+	position: absolute;
+	-webkit-transition: all 0.1s  ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+img.arrow-top:hover {
+	bottom: 10px;
+	-webkit-transition: all 0.1s  ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
 /* backgrounds */
 .likavitos {
 	background: url('img/likavitos.jpg');
@@ -22,8 +57,7 @@ h1 {
 	background-size: cover;
 }
 .new-york {
-	background: url('http://nyc.wpengine.netdna-cdn.com/wp-content/uploads/2013/02/DSC_0630.jpg');
-	background-position: right;
+	background: url('img/new-york.gif');
 	background-size: cover;
 }
 .olympos {
@@ -32,11 +66,36 @@ h1 {
 	background-size: cover;
 }
 .moonlight {
-	background-image: url("http://38.media.tumblr.com/tumblr_m3d3khUsv61qidet8o1_1280.jpg");
+	background-image: url("img/moonlight.jpg");
 	background-size: cover;
 }
 .old-london {
-	background-image: url("http://www.bugbog.com/images/galleries/london-pictures/Museum-of-London/old-london-picture.jpg");
+	background-image: url("img/london.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.night {
+	background-image: url("img/night.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.turkey {
+	background-image: url("img/turkey.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.smoke {
+	background-image: url("img/smoke.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.sea {
+	background-image: url("img/sea.jpg");
+	background-size: cover;
+	background-position: center;
+}
+.sunset {
+	background-image: url("img/sunset.jpg");
 	background-size: cover;
 	background-position: center;
 }
@@ -103,9 +162,65 @@ font-family: 'Ubuntu Condensed', sans-serif;
 .open-sans-condensed {
 	font-family: 'Open Sans Condensed', sans-serif;
 }
+.noto-sans {
+	font-family: 'Noto Sans', sans-serif;
+}
+.roboto {
+	font-family: 'Roboto', sans-serif;
+}
+.caudex {
+font-family: 'Caudex', serif;
+}
 /* english fonts */
 .fonts-names {
 	padding: 10px;
 	font-family: 'Alegreya', serif;
 	font-size: 15px;
+}
+
+
+
+.shadow {
+	text-shadow: 3px 3px 5px #000;
+}
+
+/* share buttons */
+#share {
+	background: #6C6C6C;
+}
+.share {
+	position: relative;
+	float: left;
+	min-height: 30vh;
+	background:#6C6C6C;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	-webkit-transition: all 0.1s;
+	-o-transition: all 0.1s;
+	transition: all 0.1s;
+}
+.share:hover {
+	-webkit-transition: all 0.1s;
+	-o-transition: all 0.1s;
+	transition: all 0.1s;
+}
+.facebook {
+	background-image: url('img/fb.png');
+	
+}
+.twitter {
+	background-image: url('img/tw.png');
+}
+.google {
+	background-image: url('img/g+.png');
+}
+
+.facebook:hover {
+	background-color: #3b5998;
+}
+.google:hover {
+	background-color: #dd4b39;
+}
+.twitter:hover {
+	background-color: #55acee;
 }
