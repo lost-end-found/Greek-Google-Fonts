@@ -170,10 +170,10 @@
                     <img alt="profile picture of Larry Ioannidis" src="/img/me-2.png" width="100px">
                     <p class="roboto-slab white">
                         This project was made by Larry Ioannidis.<br />
-                        Check out my website <a class="white" href="http://chatwithlarry.gr" target="_blank"
+                        Check out my website <a class="white" href="https://withlarry.com" target="_blank"
                             rel="noopener">here</a>, add me on facebook <a class="white"
                             href="https://www.facebook.com/larry.ioannidis" target="_blank" rel="noopener"> here</a> or
-                        on linkedin <a class="white" href="http://gr.linkedin.com/in/larryioannidis" target="_blank"
+                        on linkedin <a class="white" href="https://gr.linkedin.com/in/larryioannidis" target="_blank"
                             rel="noopener"> here</a>
                         <br /><br />
                         I am currently looking for a job as a Web Designer <br />
