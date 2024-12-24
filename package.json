@@ -1,0 +1,25 @@
+{
+  "name": "greek-google-fonts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Greek Google Fonts Combinations",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "start": "node .output/server/index.mjs",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@nuxtjs/tailwindcss": "^6.12.2",
+    "nuxt": "^3.14.1592",
+    "postcss": "^8.4.49",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.9.0",
+    "pinia": "^2.3.0"
+  }
+}
