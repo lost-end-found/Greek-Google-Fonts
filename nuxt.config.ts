@@ -1,3 +1,5 @@
+import { defineNuxtConfig } from 'nuxt/config'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
@@ -20,6 +22,13 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'publisher', href: 'https://plus.google.com/+LarryIoannidis' }
+      ],
+      script: [
+        {
+          defer: true,
+          'data-domain': 'greek-fonts.withlarry.com',
+          src: 'https://analytics.rakun.ie/js/script.js'
+        }
       ]
     }
   },
