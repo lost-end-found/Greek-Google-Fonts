@@ -13,13 +13,13 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
-    "@nuxtjs/tailwindcss": "^6.12.2",
-    "nuxt": "^3.14.1592",
-    "postcss": "^8.4.49",
+    "@tailwindcss/vite": "^4.3.0",
+    "nuxt": "^4.4.6",
+    "tailwindcss": "^4.3.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
-    "@pinia/nuxt": "^0.9.0",
-    "pinia": "^2.3.0"
+    "@pinia/nuxt": "^0.11.3",
+    "pinia": "^3.0.4"
   }
 }
