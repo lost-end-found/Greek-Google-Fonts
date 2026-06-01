@@ -1,28 +1,37 @@
+<script setup lang="ts">
+const route = useRoute()
+const links = [
+  { to: '/', label: 'Συνδυασμοί', en: 'Grid' },
+  { to: '/gallery', label: 'Συλλογή', en: 'Gallery' }
+]
+const isActive = (to: string) =>
+  to === '/' ? route.path === '/' : route.path.startsWith(to)
+</script>
+
 <template>
-  <nav class="bg-white shadow">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <div class="flex">
-          <div class="flex-shrink-0 flex items-center">
-            <h1 class="text-xl font-bold text-gray-900">
-              Greek Google Fonts
-            </h1>
-          </div>
-        </div>
-        <div class="flex items-center">
-          <NuxtLink 
-            :to="currentRoute === '/classic' ? '/' : '/classic'"
-            class="ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-gray-700 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-          >
-            {{ currentRoute === '/classic' ? 'View Modern Version' : 'View Classic Version' }}
-          </NuxtLink>
-        </div>
+  <nav class="fixed inset-x-0 top-0 z-50 border-b border-stone-200/80 bg-paper/85 backdrop-blur supports-[backdrop-filter]:bg-paper/70">
+    <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <NuxtLink
+        to="/"
+        class="rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+      >
+        <span class="font-heading text-xl tracking-tight text-ink">Greek Google Fonts</span>
+      </NuxtLink>
+
+      <div class="flex items-center gap-1 sm:gap-2">
+        <NuxtLink
+          v-for="link in links"
+          :key="link.to"
+          :to="link.to"
+          :aria-current="isActive(link.to) ? 'page' : undefined"
+          class="relative rounded-md px-3 py-2 text-sm font-medium transition hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          :class="isActive(link.to)
+            ? 'text-ink after:absolute after:inset-x-3 after:-bottom-0.5 after:h-0.5 after:rounded-full after:bg-accent'
+            : 'text-soft'"
+        >
+          {{ link.label }}
+        </NuxtLink>
       </div>
     </div>
   </nav>
 </template>
-
-<script setup lang="ts">
-const route = useRoute()
-const currentRoute = computed(() => route.path)
-</script> 

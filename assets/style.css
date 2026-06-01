@@ -1,56 +1,37 @@
 @import "tailwindcss";
 
+/* ── Tailwind v4 theme tokens → generate bg-/text-/border-/outline- (paper, ink,
+   soft, accent), font-heading / font-alegreya, rounded-card, shadow-card(-hover) ── */
+@theme {
+	--color-paper: #faf8f4;          /* warm ivory page background */
+	--color-ink: #1c1a17;            /* primary text */
+	--color-soft: #6b6258;           /* muted/secondary text */
+	--color-accent: #b4471f;         /* terracotta — Attic pottery red, used sparingly */
+	--font-heading: "GFS Didot", serif;
+	--font-alegreya: "Alegreya", serif;
+	--radius-card: 1rem;
+	--shadow-card: 0 1px 2px rgb(28 26 23 / 0.04), 0 8px 24px -12px rgb(28 26 23 / 0.14);
+	--shadow-card-hover: 0 2px 6px rgb(28 26 23 / 0.06), 0 18px 40px -16px rgb(28 26 23 / 0.24);
+}
+
+/* Plain custom property consumed directly by scoped styles (gallery reading measure). */
+:root {
+	--gf-read-width: 65ch;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 4rem;
+}
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+}
 body {
 	margin: 0;
 }
-section {
-	min-height: 100vh;
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	position: relative;
-}
-h1 {
-	font-weight: 800;
-	margin: 0;
-}
-a.white {
-	color: white;
-	text-decoration: underline;
-}
-nav {
-	position: fixed;
-	z-index: 999;
-}
-img.arrow {
-	left: 48%;
-	bottom: 10px;
-	position: absolute;
-	-webkit-transition: all 0.1s  ease-in-out;
-	-o-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
-}
-img.arrow:hover {
-	bottom: 5px;
-	-webkit-transition: all 0.1s  ease-in-out;
-	-o-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
-}
-img.arrow-top {
-	left: 48%;
-	bottom: 5px;
-	position: absolute;
-	-webkit-transition: all 0.1s  ease-in-out;
-	-o-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
-}
-img.arrow-top:hover {
-	bottom: 10px;
-	-webkit-transition: all 0.1s  ease-in-out;
-	-o-transition: all 0.1s ease-in-out;
-	transition: all 0.1s ease-in-out;
-}
-/* backgrounds */
+/* backgrounds — full-bleed photographs paired with poems on /gallery */
 .likavitos {
 	background: url('/img/likavitos.jpg');
 	background-position: center;
@@ -99,18 +80,13 @@ img.arrow-top:hover {
 	background-size: cover;
 	background-position: center;
 }
-p.columns-text {
-    -webkit-column-count: 2; /* Chrome, Safari, Opera */
-    -moz-column-count: 2; /* Firefox */
-    column-count: 2;
-}
-/* font colors */
-
-.white {
-	color: white;
+.grass {
+	background-image: url("/img/grass.jpg");
+	background-size: cover;
+	background-position: center;
 }
 
-/* fonts */
+/* font-family helpers — applied by class on /gallery (the grid uses inline bindings) */
 .ubuntu { 
 	font-family: 'Ubuntu', sans-serif;
 	}
@@ -171,50 +147,9 @@ font-family: 'Ubuntu Condensed', sans-serif;
 .caudex {
 font-family: 'Caudex', serif;
 }
-/* english fonts */
-.fonts-names {
-	padding: 10px;
-	font-family: 'Alegreya', serif;
-	font-size: 15px;
+.cardo {
+	font-family: 'Cardo', serif;
 }
-
-/* share buttons */
-#share {
-	background: #6C6C6C;
-}
-.share {
-	position: relative;
-	float: left;
-	min-height: 30vh;
-	background:#6C6C6C;
-	background-repeat: no-repeat;
-	background-position: 50% 50%;
-	-webkit-transition: all 0.1s;
-	-o-transition: all 0.1s;
-	transition: all 0.1s;
-}
-.share:hover {
-	-webkit-transition: all 0.1s;
-	-o-transition: all 0.1s;
-	transition: all 0.1s;
-}
-.facebook {
-	background-image: url('/img/fb.png');
-	
-}
-.twitter {
-	background-image: url('/img/tw.png');
-}
-.google {
-	background-image: url('/img/g+.png');
-}
-
-.facebook:hover {
-	background-color: #3b5998;
-}
-.google:hover {
-	background-color: #dd4b39;
-}
-.twitter:hover {
-	background-color: #55acee;
+.noto-serif {
+	font-family: 'Noto Serif', serif;
 }
