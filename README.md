@@ -1,6 +1,6 @@
 # Greek Google Fonts
 
-Hand-picked combinations of Greek-capable Google Fonts, with a live preview and copy-paste CSS. Built with Nuxt 4, TypeScript, and Tailwind CSS 4, and deployed to Cloudflare Workers.
+Hand-picked combinations of Greek-capable Google Fonts, with a live preview and copy-paste CSS. Built with Nuxt 4, TypeScript, and Tailwind CSS 4, tooled with [Vite+](https://viteplus.dev/) and [Bun](https://bun.com/), and deployed to Cloudflare Workers.
 
 Live at **[greek-fonts.withlarry.com](https://greek-fonts.withlarry.com/)**.
 
@@ -18,15 +18,27 @@ Live at **[greek-fonts.withlarry.com](https://greek-fonts.withlarry.com/)**.
 - [Tailwind CSS 4](https://tailwindcss.com/) (via `@tailwindcss/vite`)
 - [Pinia](https://pinia.vuejs.org/) for the font-combination store
 - [`@nuxt/fonts`](https://fonts.nuxt.com/) for self-hosted Google Fonts
+- [Vite+](https://viteplus.dev/) (`vp`) as the unified toolchain entry point
+- [Bun](https://bun.com/) as the package manager and runtime (`bun.lock`)
 - [Cloudflare Workers](https://workers.cloudflare.com/) static-asset hosting (`wrangler`)
+
+## Prerequisites
+
+Install [Bun](https://bun.com/) and [Vite+](https://viteplus.dev/) once:
+
+```bash
+curl -fsSL https://bun.sh/install | bash        # Bun
+curl -fsSL https://viteplus.dev/install.sh | bash   # Vite+ (vp)
+```
+
+Vite+ delegates to Bun automatically because `bun.lock` is committed.
 
 ## Setup
 
-Install dependencies (Yarn is the committed lockfile):
+Install dependencies:
 
 ```bash
-yarn install
-# or: npm install
+vp install        # delegates to bun; or run `bun install` directly
 ```
 
 ## Development
@@ -34,17 +46,28 @@ yarn install
 Start the dev server on http://localhost:3000:
 
 ```bash
-yarn dev
+vp run dev
 ```
+
+Other tasks (each delegates to the matching `package.json` script via Bun):
+
+```bash
+vp run generate   # static production build → .output/public
+vp run preview    # preview a production build
+```
+
+> Note: use `vp run <script>` for this Nuxt app — Nuxt manages its own Vite,
+> so the framework's CLI runs through the `package.json` scripts rather than
+> Vite+'s direct `vp dev` / `vp build`.
 
 ## Deployment
 
-Deployment is automatic: pushing to the repository triggers a Cloudflare Workers build and deploy. `wrangler.jsonc` defines the build output (`.output/public`) and maps the custom domain `greek-fonts.withlarry.com`.
+Deployment is automatic: pushing to the repository triggers a Cloudflare Workers build and deploy. Cloudflare detects Bun from the committed `bun.lock`. `wrangler.jsonc` defines the build output (`.output/public`) and maps the custom domain `greek-fonts.withlarry.com`.
 
 To build the static site locally:
 
 ```bash
-yarn generate          # outputs to .output/public
+vp run generate   # outputs to .output/public
 ```
 
 ## Project structure
