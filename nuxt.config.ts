@@ -1,4 +1,5 @@
 import { defineNuxtConfig } from 'nuxt/config'
+import tailwindcss from '@tailwindcss/vite'
 
 // Every Greek-capable family showcased on the site. They are referenced
 // dynamically (`:style="{ fontFamily }"` on the grid) and via CSS classes on
@@ -15,7 +16,6 @@ const SHOWCASE_FONTS = [
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
-    '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
     '@nuxt/fonts',
   ],
@@ -54,5 +54,9 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+  vite: {
+    plugins: [tailwindcss()],
+    assetsInclude: ['**/*.html']
   }
 })

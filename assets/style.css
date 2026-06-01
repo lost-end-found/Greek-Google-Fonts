@@ -1,17 +1,21 @@
-/* ── Design tokens — shared by the grid (/) and the gallery (/gallery) ─────── */
+@import "tailwindcss";
+
+/* ── Tailwind v4 theme tokens → generate bg-/text-/border-/outline- (paper, ink,
+   soft, accent), font-heading / font-alegreya, rounded-card, shadow-card(-hover) ── */
+@theme {
+	--color-paper: #faf8f4;          /* warm ivory page background */
+	--color-ink: #1c1a17;            /* primary text */
+	--color-soft: #6b6258;           /* muted/secondary text */
+	--color-accent: #b4471f;         /* terracotta — Attic pottery red, used sparingly */
+	--font-heading: "GFS Didot", serif;
+	--font-alegreya: "Alegreya", serif;
+	--radius-card: 1rem;
+	--shadow-card: 0 1px 2px rgb(28 26 23 / 0.04), 0 8px 24px -12px rgb(28 26 23 / 0.14);
+	--shadow-card-hover: 0 2px 6px rgb(28 26 23 / 0.06), 0 18px 40px -16px rgb(28 26 23 / 0.24);
+}
+
+/* Plain custom property consumed directly by scoped styles (gallery reading measure). */
 :root {
-	--gf-paper: #faf8f4;          /* warm ivory page background */
-	--gf-ink: #1c1a17;            /* primary text */
-	--gf-soft: #6b6258;           /* muted/secondary text */
-	--gf-accent: #b4471f;         /* terracotta — Attic pottery red, used sparingly */
-	--gf-accent-ink: #052f54;     /* deep navy from the original intro */
-	--gf-space-1: .5rem;
-	--gf-space-2: 1rem;
-	--gf-space-3: 1.5rem;
-	--gf-space-4: 2rem;
-	--gf-space-6: 3rem;
-	--gf-radius: 1rem;
-	--gf-shadow: 0 1px 2px rgb(28 26 23 / .04), 0 8px 24px -12px rgb(28 26 23 / .14);
 	--gf-read-width: 65ch;
 }
 
