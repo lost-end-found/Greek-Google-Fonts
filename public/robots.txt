@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://greek-fonts.withlarry.com/sitemap.xml

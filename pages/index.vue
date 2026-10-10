@@ -1,7 +1,17 @@
 <script setup lang="ts">
 import { useFontsStore } from '~/stores/fonts'
 
-useHead({ title: 'Συνδυασμοί γραμματοσειρών' })
+const seoTitle = 'Συνδυασμοί γραμματοσειρών · Greek Google Fonts'
+const seoDescription = 'Διαλεγμένοι συνδυασμοί Ελληνικών γραμματοσειρών από το Google Fonts, με ζωντανή προεπισκόπηση — έτοιμοι για το site σας.'
+useHead({ title: 'Συνδυασμοί γραμματοσειρών', link: [{ rel: 'canonical', href: 'https://greek-fonts.withlarry.com/' }] })
+useSeoMeta({
+  description: seoDescription,
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
+  ogUrl: 'https://greek-fonts.withlarry.com/',
+  twitterTitle: seoTitle,
+  twitterDescription: seoDescription
+})
 
 const fontStore = useFontsStore()
 
