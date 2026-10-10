@@ -37,14 +37,15 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'description', content: 'Διαλεγμένοι συνδυασμοί Ελληνικών γραμματοσειρών από το Google Fonts, με ζωντανή προεπισκόπηση — έτοιμοι για το site σας.' },
-        { property: 'og:title', content: 'Greek Google Fonts Combinations' },
         { property: 'og:type', content: 'website' },
-        { property: 'og:url', content: 'https://greek-fonts.withlarry.com/' },
+        { property: 'og:site_name', content: 'Greek Google Fonts' },
+        { property: 'og:locale', content: 'el_GR' },
         { property: 'og:image', content: 'https://greek-fonts.withlarry.com/img/greek-google-fonts.jpg' },
-        { property: 'og:description', content: 'Συνδυασμοί Ελληνικών γραμματοσειρών από το Google Fonts για να βάλετε στο site σας.' }
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:image', content: 'https://greek-fonts.withlarry.com/img/greek-google-fonts.jpg' }
       ],
       link: [
-        { rel: 'canonical', href: 'https://greek-fonts.withlarry.com/' }
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
       ],
       script: [
         {

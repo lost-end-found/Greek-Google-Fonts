@@ -11,12 +11,15 @@ const isActive = (to: string) =>
 <template>
   <nav class="fixed inset-x-0 top-0 z-50 border-b border-stone-200/80 bg-paper/85 backdrop-blur supports-[backdrop-filter]:bg-paper/70">
     <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <div class="flex items-baseline gap-4">
       <NuxtLink
         to="/"
         class="rounded-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
       >
         <span class="font-heading text-xl tracking-tight text-ink">Greek Google Fonts</span>
       </NuxtLink>
+      <a href="https://withlarry.com" class="hidden text-xs text-soft transition hover:text-ink sm:inline">← withlarry.com</a>
+      </div>
 
       <div class="flex items-center gap-1 sm:gap-2">
         <NuxtLink

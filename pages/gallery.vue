@@ -1,7 +1,17 @@
 <script setup lang="ts">
 import { poems } from '~/data/poems'
 
-useHead({ title: 'Συλλογή ποίησης' })
+const seoTitle = 'Συλλογή ποίησης · Greek Google Fonts'
+const seoDescription = 'Ελληνική ποίηση σε επιλεγμένες γραμματοσειρές του Google Fonts — δείτε πώς φαίνονται τα ελληνικά σε πραγματικό κείμενο, πριν τις βάλετε στο site σας.'
+useHead({ title: 'Συλλογή ποίησης', link: [{ rel: 'canonical', href: 'https://greek-fonts.withlarry.com/gallery' }] })
+useSeoMeta({
+  description: seoDescription,
+  ogTitle: seoTitle,
+  ogDescription: seoDescription,
+  ogUrl: 'https://greek-fonts.withlarry.com/gallery',
+  twitterTitle: seoTitle,
+  twitterDescription: seoDescription
+})
 
 const sections = [
   ...poems.map((p) => ({ id: p.id, label: p.title ?? p.id })),
