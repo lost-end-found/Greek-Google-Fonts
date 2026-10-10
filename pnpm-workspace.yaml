@@ -1,3 +1,8 @@
 allowBuilds:
   esbuild: true
   "@parcel/watcher": true
+# Patched versions for transitive dev-tooling advisories (Dependabot, 10 Oct 2026).
+overrides:
+  simple-git: ^4.0.1
+  "@simple-git/argv-parser": ^2.0.1
+  esbuild: ">=0.28.1"
