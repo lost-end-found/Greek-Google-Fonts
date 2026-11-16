@@ -50,8 +50,8 @@ export default defineNuxtConfig({
       script: [
         {
           defer: true,
-          'data-domain': 'greek-fonts.withlarry.com',
-          src: 'https://analytics.rakun.ie/js/script.js'
+          src: 'https://analytics.lostendfound.com/script.js',
+          'data-website-id': '18ef634f-ae4b-42d3-9ae1-e28e3034d79b'
         }
       ]
     }
